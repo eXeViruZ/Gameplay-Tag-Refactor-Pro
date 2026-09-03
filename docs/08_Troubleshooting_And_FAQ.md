@@ -10,7 +10,11 @@
 
 ## Full Scan takes a noticeable amount of time
 
-Large projects can require a longer scan because GTRP processes project assets and supported Blueprint/serialized data.
+The first Full Scan after starting Unreal Editor can take noticeably longer because project assets and editor-side data may need to be loaded and cached.
+
+Subsequent Full Scans during the same editor session are typically faster. Scan time depends on project size, asset count, and the current editor state.
+
+This is expected behavior and does not mean every scan in the same editor session will take as long as the initial cold scan.
 
 Use the progress dialog and **Cancel** if necessary. Run a fresh Full Scan before an actual rename.
 
@@ -69,6 +73,9 @@ A generic dotted String/Name/Text value is not accepted merely because it resemb
 Native/engine-defined tags are excluded from the v1.0 missing-comment and no-supported-usage rules where those findings would not be customer-actionable.
 
 ## FAQ
+
+### Why can the first Full Scan take longer?
+The first Full Scan after starting Unreal Editor can take longer because project assets and editor-side data may need to be loaded and cached. Subsequent scans during the same editor session are typically faster. Scan time depends on project size, asset count, and the current editor state.
 
 ### Does GTRP rewrite every Gameplay Tag reference?
 No. v1.0 automatically refactors confirmed supported exact reference types.
