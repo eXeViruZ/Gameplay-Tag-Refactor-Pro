@@ -19,6 +19,12 @@
 9. Optionally click **Run Audit**.
 10. Use **Export CSV** or **Export JSON** if you need an external report.
 
+### Scan performance note
+
+The first Full Scan after starting Unreal Editor can take noticeably longer because project assets and editor-side data may need to be loaded and cached. Subsequent Full Scans during the same editor session are typically faster.
+
+Scan time depends on project size, asset count, and the current editor state. A longer initial scan does not mean every scan in the session will take the same amount of time.
+
 ## Expected result
 
 After a successful scan you should see:
