@@ -4,6 +4,8 @@
 
 Gameplay Tag Refactor Pro helps you understand where Gameplay Tags are used before you change them. It combines a searchable tag tree, project-wide usage scanning, per-tag inspection, Impact Preview, controlled rename execution, backup and verification safeguards, audit rules, and CSV/JSON reporting in one editor-only Unreal Engine plugin.
 
+[Watch the Gameplay Tag Refactor Pro product showcase on YouTube](https://youtu.be/cwRiiMac3x0)
+
 | Product | Details |
 |---|---|
 | Version | 1.0.0 |
@@ -35,6 +37,8 @@ Gameplay Tag Refactor Pro helps you understand where Gameplay Tags are used befo
 7. When Preview is **READY**, click **Rename Tag**.
 8. Review the execution result, verification status, changed assets, and backup location.
 9. Restart Unreal Editor if Unreal requests it, then run a fresh scan.
+
+> **Scan performance:** The first Full Scan after starting Unreal Editor can take noticeably longer while project assets and editor-side data are loaded and cached. Subsequent scans during the same editor session are typically faster. Scan time depends on project size, asset count, and editor state.
 
 For the complete workflow, start with [Quick Start](docs/02_Quick_Start.md) and [Core Workflow](docs/03_Core_Workflow.md).
 
