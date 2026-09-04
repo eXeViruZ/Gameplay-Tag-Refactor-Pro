@@ -6,6 +6,9 @@
 - **Unreal Engine:** 5.8
 - **Plugin type:** Editor-only C++ plugin
 - Your project must use Unreal Engine's Gameplay Tags system.
+- Epic's built-in **GameplayTagsEditor** plugin must be enabled. It is included with Unreal Engine 5.8 and is required by GTRP's editor-side controlled rename workflow.
+
+GTRP does not add a runtime gameplay dependency and does not require any third-party plugins.
 
 Final packaged platform details should be treated as authoritative only after the final BuildPlugin/packaging validation.
 
@@ -15,9 +18,10 @@ Final packaged platform details should be treated as authoritative only after th
 2. Install it for Unreal Engine 5.8 using the normal Fab/Epic workflow.
 3. Open your UE 5.8 project.
 4. Open **Edit → Plugins**.
-5. Search for **Gameplay Tag Refactor Pro**.
-6. Enable the plugin if required.
-7. Restart Unreal Editor if prompted.
+5. Confirm Epic's built-in **GameplayTagsEditor** plugin is enabled.
+6. Search for **Gameplay Tag Refactor Pro**.
+7. Enable the plugin if required.
+8. Restart Unreal Editor if prompted.
 
 ## Open GTRP
 
@@ -33,8 +37,9 @@ Both entry points open or focus the same dockable GTRP tab.
 1. Close Unreal Editor.
 2. Update the plugin through the same installation method.
 3. Reopen the UE 5.8 project.
-4. Confirm GTRP opens normally.
-5. Run **Run Full Scan** before performing a rename after an update.
+4. Confirm **GameplayTagsEditor** and GTRP are enabled.
+5. Confirm GTRP opens normally.
+6. Run **Run Full Scan** before performing a rename after an update.
 
 ## Removing
 
