@@ -11,7 +11,10 @@ Gameplay Tag Refactor Pro helps you understand where Gameplay Tags are used befo
 | Version | 1.0.0 |
 | Unreal Engine | 5.8 |
 | Plugin Type | Editor-only C++ plugin |
+| Required Editor Dependency | Epic's built-in `GameplayTagsEditor` plugin |
 | Runtime Gameplay Dependency | None |
+
+> **Dependency:** GTRP requires Epic's built-in **GameplayTagsEditor** plugin, included with Unreal Engine 5.8. GTRP uses its editor-side Gameplay Tag APIs for the controlled rename workflow. This dependency is editor-only and does not add a runtime gameplay dependency.
 
 ## Main Features
 
@@ -29,14 +32,15 @@ Gameplay Tag Refactor Pro helps you understand where Gameplay Tags are used befo
 ## Quick Start
 
 1. Install and enable **Gameplay Tag Refactor Pro** for Unreal Engine 5.8.
-2. Open **Tools → Gameplay Tags → Gameplay Tag Refactor Pro**, or use the toolbar icon.
-3. Click **Run Full Scan**.
-4. Select an explicit Gameplay Tag in the **Tag Tree** and inspect **Tag Details** and **Usages**.
-5. Enter the desired Target tag and click **Preview Impact**.
-6. Resolve blockers and review warnings.
-7. When Preview is **READY**, click **Rename Tag**.
-8. Review the execution result, verification status, changed assets, and backup location.
-9. Restart Unreal Editor if Unreal requests it, then run a fresh scan.
+2. Confirm Epic's built-in **GameplayTagsEditor** plugin is enabled for the project.
+3. Open **Tools → Gameplay Tags → Gameplay Tag Refactor Pro**, or use the toolbar icon.
+4. Click **Run Full Scan**.
+5. Select an explicit Gameplay Tag in the **Tag Tree** and inspect **Tag Details** and **Usages**.
+6. Enter the desired Target tag and click **Preview Impact**.
+7. Resolve blockers and review warnings.
+8. When Preview is **READY**, click **Rename Tag**.
+9. Review the execution result, verification status, changed assets, and backup location.
+10. Restart Unreal Editor if Unreal requests it, then run a fresh scan.
 
 > **Scan performance:** The first Full Scan after starting Unreal Editor can take noticeably longer while project assets and editor-side data are loaded and cached. Subsequent scans during the same editor session are typically faster. Scan time depends on project size, asset count, and editor state.
 
